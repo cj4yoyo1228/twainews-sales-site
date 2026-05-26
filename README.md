@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 臺灣人新聞網 — 新聞銷售官網
 
-## Getting Started
+把您 Google 上的真實好評，編輯成一篇刊登於臺灣人新聞網的專業新聞報導。
+這是給「在地店家媒體合作」服務的銷售 landing page。
 
-First, run the development server:
+## 技術棧
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 14** (App Router) + **TypeScript**
+- **React 18**
+- **Tailwind v3**（已裝但目前未用，預留給未來 utility 微調）
+- **Noto Sans TC + Inter**（透過 `next/font/google` 載入）
+- **Flaticon UICons**（CDN，圖示用）
+- 設計 CSS：`app/styles/tokens.css` + `app/styles/styles-v2.css` — 沿用 Claude Design 匯出的 pixel-perfect CSS
+
+## 目錄結構
+
+```
+新聞銷售官網/
+├── app/
+│   ├── components/
+│   │   ├── AnimatedNumber.tsx   數字計數動畫（IntersectionObserver）
+│   │   ├── ApplyForm.tsx        申請表單（送出後導向 Google Form）
+│   │   ├── CityGrid.tsx         22 縣市選擇按鈕（toggle）
+│   │   └── SmoothScroll.tsx     錨點點擊平滑捲動（含 72px header 偏移）
+│   ├── styles/
+│   │   ├── tokens.css           UniLife 設計系統 token
+│   │   └── styles-v2.css        Landing Page v2 完整樣式
+│   ├── globals.css              Tailwind layers + 設計 CSS 入口
+│   ├── icon.svg                 favicon
+│   ├── layout.tsx               <html> + 字型 + SEO meta
+│   └── page.tsx                 主頁面（v2 設計搬上來）
+├── public/assets/               logo + 範例圖（取自 design bundle）
+├── .env.local                   Google Form 網址（gitignored，不會被推到 GitHub）
+├── .env.example                 環境變數範本
+├── tailwind.config.ts           （已關 preflight 避免覆蓋設計 reset）
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 在本地跑起來
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 1. 進到專案根目錄
+cd ~/Desktop/Vibe\ Coding/UniLife/新聞網/新聞銷售官網
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 2. 安裝依賴（首次或更新 package.json 後）
+npm install
 
-## Learn More
+# 3. 啟動 dev server（自動 hot reload）
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+瀏覽器打開 [http://localhost:3000](http://localhost:3000) 就能看到。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 環境變數
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+把 `.env.example` 複製成 `.env.local` 然後填上：
 
-## Deploy on Vercel
+| 變數                          | 用途                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------ |
+| `NEXT_PUBLIC_GOOGLE_FORM_URL` | 申請表單送出後會開新分頁導向這個網址。沒填的話走 demo 模式只顯示成功訊息 |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+目前 `.env.local` 已經填好現有的 Google Form 短網址。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build & Production 測試
+
+```bash
+npm run build   # 編譯成 production bundle
+npm run start   # 跑 production server，預設 port 3000
+```
+
+## 部署到 Vercel
+
+1. **使用者先看過本地版本沒問題**才 deploy
+2. 在 Vercel dashboard 連這個資料夾的 git remote（或用 `vercel --prod` CLI）
+3. 把 `NEXT_PUBLIC_GOOGLE_FORM_URL` 加到 Vercel **Environment Variables**
+4. Deploy
+
+## 設計來源
+
+`Landing Page v2.html` 由 Claude Design (claude.ai/design) 匯出，原始 HTML/CSS 在 `~/Desktop/新聞銷售官網/project/` 還可以對照。
+
+策略是保留原始 CSS 不重寫成 Tailwind，把 HTML 轉成 React component 並抽出 4 個互動單元（數字計數、縣市選擇、表單、平滑捲動）。確保 pixel-perfect 一致。
+
+## 版本
+
+v1.0.0 — 2026-05-26 初版（Landing Page v2 設計）

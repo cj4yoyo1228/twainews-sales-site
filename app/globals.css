@@ -1,27 +1,11 @@
+/* Tailwind layers — 安裝但目前未使用，預留給未來 utility class 微調 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Design system imports — 直接沿用 design bundle 的 pixel-perfect CSS */
+@import "./styles/tokens.css";
+@import "./styles/styles-v2.css";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+/* 字型由 layout.tsx 在 <head> 用 <link> 載入 Google Fonts CDN（Inter + Noto Sans TC）
+   實際字型 stack 由 tokens.css 的 --font-body 控制 */

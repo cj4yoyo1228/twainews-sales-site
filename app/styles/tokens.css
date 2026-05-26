@@ -1,0 +1,412 @@
+/* ========================================================================
+   UniLife 攸你資訊 — Design Tokens
+   Extracted from: 所有社群圖卡.fig
+   Usage: @import this file at the root of your app / design system
+   ======================================================================== */
+
+:root {
+  /* ----------------------------------------------------------------------
+     COLOR — NAVY (深藍)
+     Primary CTA, headings, ink
+     ---------------------------------------------------------------------- */
+  --color-navy-900: #0F2B4F;
+  --color-navy-800: #183058;
+  --color-navy-700: #0F4484;
+  --color-navy-600: #104888;   /* ★ Main CTA */
+  --color-navy-500: #1B5BA3;
+
+  /* ----------------------------------------------------------------------
+     COLOR — TEAL (湖水綠 / 薄荷)
+     Brand identity, accents, backgrounds
+     ---------------------------------------------------------------------- */
+  --color-teal-700: #007F8F;
+  --color-teal-600: #00A8B8;   /* ★ Brand dot */
+  --color-teal-500: #20B8C0;
+  --color-teal-400: #60C8D8;
+  --color-teal-300: #7AD4DA;
+  --color-teal-200: #A4E0E4;
+  --color-teal-100: #C8ECEC;
+  --color-teal-50:  #DBEAE9;   /* ★ Mint background signature */
+
+  /* ----------------------------------------------------------------------
+     COLOR — SAND (暖橘黃) — use sparingly
+     ---------------------------------------------------------------------- */
+  --color-sand-500: #F8B048;
+  --color-sand-300: #FCB44C;
+  --color-sand-100: #FDE4B0;
+
+  /* ----------------------------------------------------------------------
+     COLOR — NEUTRAL / INK
+     ---------------------------------------------------------------------- */
+  --color-surface:       #FFFFFF;
+  --color-surface-alt:   #FAFAFA;
+  --color-surface-mint:  #DBEAE9;
+  --color-ink-900:       #0F172A;
+  --color-ink-700:       #334155;
+  --color-ink-500:       #64748B;
+  --color-ink-400:       #94A3B8;
+  --color-ink-300:       #A0A8B8;
+  --color-border:        #E2E8F0;
+  --color-divider:       #F1F5F9;
+
+  /* ----------------------------------------------------------------------
+     SEMANTIC ALIASES — USE THESE BY DEFAULT
+     ---------------------------------------------------------------------- */
+  --primary:            var(--color-navy-600);
+  --primary-hover:      var(--color-navy-700);
+  --primary-foreground: #FFFFFF;
+
+  --accent:             var(--color-teal-600);
+  --accent-hover:       var(--color-teal-700);
+  --accent-soft:        var(--color-teal-300);
+
+  --background:         #FFFFFF;
+  --background-mint:    var(--color-surface-mint);
+  --background-alt:     var(--color-surface-alt);
+
+  --foreground:         var(--color-ink-900);
+  --foreground-muted:   var(--color-ink-500);
+
+  --border:             var(--color-border);
+  --divider:            var(--color-divider);
+
+  --highlight:          var(--color-sand-500);
+
+  /* ----------------------------------------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------------------------------------- */
+  --font-display: "Noto Sans TC", "Taipei Sans TC Beta",
+                  "PingFang TC", "Microsoft JhengHei",
+                  system-ui, -apple-system, sans-serif;
+  --font-body:    "Noto Sans TC", "PingFang TC",
+                  "Microsoft JhengHei", system-ui,
+                  -apple-system, sans-serif;
+  --font-latin:   "Inter", "Noto Sans TC", system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-display-2xl: 64px;
+  --text-display-xl:  48px;
+  --text-display-lg:  40px;
+  --text-heading-xl:  32px;
+  --text-heading-lg:  24px;
+  --text-heading-md:  20px;
+  --text-body-lg:     18px;
+  --text-body:        16px;
+  --text-body-sm:     14px;
+  --text-caption:     13px;
+  --text-micro:       12px;
+
+  /* Line heights */
+  --leading-tight:  1.2;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* Letter spacing */
+  --tracking-zh:    0.02em;   /* for Chinese text */
+  --tracking-latin: 0;
+
+  /* ----------------------------------------------------------------------
+     SPACING — 4px base scale
+     ---------------------------------------------------------------------- */
+  --space-0:    0;
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-14:  56px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-30: 120px;
+  --space-40: 160px;
+
+  /* ----------------------------------------------------------------------
+     RADIUS
+     ---------------------------------------------------------------------- */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ----------------------------------------------------------------------
+     SHADOW — navy-tinted, never pure black
+     ---------------------------------------------------------------------- */
+  --shadow-sm:    0 1px 2px   rgba(15, 43, 79, 0.04),
+                  0 1px 3px   rgba(15, 43, 79, 0.06);
+  --shadow-md:    0 4px 12px  rgba(15, 43, 79, 0.08),
+                  0 2px 4px   rgba(15, 43, 79, 0.04);
+  --shadow-lg:    0 12px 32px rgba(15, 43, 79, 0.10),
+                  0 4px 8px   rgba(15, 43, 79, 0.05);
+  --shadow-card:  0 4px 20px  rgba(15, 43, 79, 0.08);
+  --shadow-float: 0 20px 40px rgba(15, 43, 79, 0.12);
+
+  /* ----------------------------------------------------------------------
+     MOTION
+     ---------------------------------------------------------------------- */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:   150ms;
+  --duration-normal: 250ms;
+  --duration-slow:   400ms;
+
+  /* ----------------------------------------------------------------------
+     LAYOUT
+     ---------------------------------------------------------------------- */
+  --container-news:   1200px;  /* 新聞網內容 */
+  --container-app:     960px;
+  --social-card:      1080px;  /* 社群圖卡 */
+
+  /* ----------------------------------------------------------------------
+     Z-INDEX
+     ---------------------------------------------------------------------- */
+  --z-base:      0;
+  --z-elevated:  10;
+  --z-sticky:    20;
+  --z-modal:     40;
+  --z-toast:     50;
+  --z-tooltip:   60;
+}
+
+/* ============================================================
+   BASE RESET + TYPOGRAPHY DEFAULTS
+   ============================================================ */
+
+html {
+  font-family: var(--font-body);
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--tracking-zh);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--foreground);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus ring using brand accent */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   UTILITY COMPONENT CLASSES
+   ============================================================ */
+
+/* ---- Button ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 48px;
+  padding: 0 var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-semibold);
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+}
+.btn:hover    { transform: translateY(-1px); }
+.btn:active   { transform: translateY(0); }
+
+.btn--primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-sm);
+}
+.btn--primary:hover { background: var(--primary-hover); }
+
+.btn--secondary {
+  background: #FFF;
+  color: var(--color-navy-800);
+  border: 2px solid var(--color-navy-800);
+}
+.btn--secondary:hover { background: var(--color-navy-800); color: #FFF; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--primary);
+}
+.btn--ghost:hover { background: var(--color-teal-50); }
+
+.btn--lg { height: 56px; padding: 0 var(--space-10); font-size: 20px; }
+.btn--sm { height: 40px; padding: 0 var(--space-5); font-size: var(--text-body); }
+
+/* ---- Card ---- */
+.card {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-8);
+}
+.card--embedded {
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+/* ---- Tag / Pill ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 6px 14px;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-pill);
+  line-height: 1;
+  letter-spacing: var(--tracking-zh);
+}
+.tag--mint    { background: var(--color-teal-100); color: var(--color-teal-700); }
+.tag--teal    { background: var(--color-teal-400); color: #FFF; }
+.tag--outline { background: transparent; color: var(--color-ink-700); border: 1px solid var(--border); }
+.tag--dark    { background: var(--primary); color: #FFF; }
+
+/* ---- Input ---- */
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-4);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+  color: var(--foreground);
+  background: #FFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  border-width: 2px;
+  padding: 0 15px;  /* compensate for thicker border */
+}
+
+/* ---- Badge (circular) ---- */
+.badge-circle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  background: #FFF;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  line-height: 1.2;
+}
+.badge-circle__main  { font-size: 20px; font-weight: 700; color: var(--color-teal-700); }
+.badge-circle__sub   { font-size: 12px; color: var(--color-ink-500); margin-top: 2px; }
+
+/* ============================================================
+   ICON SYSTEM — Uicons by Flaticon (Solid Rounded only)
+   ============================================================
+   MUST load the CSS first. Choose ONE:
+
+   1) CDN (in <head>):
+      <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+   2) NPM:
+      npm i @flaticon/flaticon-uicons
+      @import "@flaticon/flaticon-uicons/css/solid/rounded.css";
+
+   Usage: <i class="fi fi-sr-ICONNAME"></i>
+   Rule:  NEVER use emoji. Always use fi-sr-* icons.
+   ============================================================ */
+
+/* Icon size tokens (use these over raw font-size) */
+.icon--xs  { font-size: 14px; line-height: 1; }
+.icon--sm  { font-size: 16px; line-height: 1; }
+.icon--md  { font-size: 20px; line-height: 1; }  /* default */
+.icon--lg  { font-size: 24px; line-height: 1; }
+.icon--xl  { font-size: 32px; line-height: 1; }
+.icon--2xl { font-size: 48px; line-height: 1; }
+
+/* Inline alignment with text — use whenever an icon sits next to Chinese text */
+.icon--inline {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -0.125em;
+}
+
+/* Icon-only button — square clickable area with accessible label */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  color: var(--color-ink-700);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+.btn-icon:hover { background: var(--color-teal-50); color: var(--color-navy-700); }
+.btn-icon--sm { width: 32px; height: 32px; font-size: 16px; }
+.btn-icon--lg { width: 48px; height: 48px; font-size: 24px; }
+
+/* Icons inside buttons/tags inherit text color and sit on the text baseline */
+.btn .fi,
+.btn-icon .fi,
+.tag .fi { display: inline-block; line-height: 1; }
+.btn .fi:first-child:not(:last-child),
+.tag .fi:first-child:not(:last-child) { margin-right: var(--space-2); }
+
+/* Default: every fi icon inherits its parent's text color */
+.fi { color: currentColor; }
+
+/* Decorative icon in a teal-tinted circle (news-site sidebars, feature bullets) */
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-teal-50);
+  color: var(--color-teal-700);
+  font-size: 18px;
+}
+.icon-circle--lg { width: 56px; height: 56px; font-size: 24px; }
