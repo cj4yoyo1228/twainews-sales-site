@@ -207,7 +207,7 @@ export default function Page() {
             <div className="trustbar__stats">
               <div className="trustbar__stat">
                 <span className="trustbar__num">
-                  <AnimatedNumber target={120} />
+                  <AnimatedNumber target={300} />
                 </span>
                 <span>+</span>
                 <span className="trustbar__lbl">合作店家</span>
@@ -215,7 +215,7 @@ export default function Page() {
               <span className="trustbar__div"></span>
               <div className="trustbar__stat">
                 <span className="trustbar__num">
-                  <AnimatedNumber target={240} />
+                  <AnimatedNumber target={500} />
                 </span>
                 <span>+</span>
                 <span className="trustbar__lbl">已刊登報導</span>
@@ -230,7 +230,7 @@ export default function Page() {
               <span className="trustbar__div"></span>
               <div className="trustbar__stat">
                 <span className="trustbar__num">
-                  <AnimatedNumber target={50} />
+                  <AnimatedNumber target={100} />
                 </span>
                 <span>K+</span>
                 <span className="trustbar__lbl">月閱讀</span>
@@ -666,7 +666,7 @@ export default function Page() {
             <div className="bigstats__hero">
               <span className="bigstats__num">
                 <span className="num">
-                  <AnimatedNumber target={120} />
+                  <AnimatedNumber target={300} />
                 </span>
                 <span className="plus">+</span>
               </span>
@@ -681,7 +681,7 @@ export default function Page() {
               <div className="bigstats__row">
                 <span className="bigstats__num-sm">
                   <span className="num">
-                    <AnimatedNumber target={240} />
+                    <AnimatedNumber target={500} />
                   </span>
                   <span className="plus">+</span>
                 </span>
@@ -690,7 +690,7 @@ export default function Page() {
               <div className="bigstats__row">
                 <span className="bigstats__num-sm">
                   <span className="num">
-                    <AnimatedNumber target={50} />
+                    <AnimatedNumber target={100} />
                   </span>
                   <span className="plus">K+</span>
                 </span>
@@ -1396,6 +1396,9 @@ export default function Page() {
           <span>© 2026 臺灣人新聞網 ・ UniLife 攸你資訊 版權所有</span>
           <span>
             <a href="#">隱私權</a> · <a href="#">服務條款</a>
+            <span style={{ opacity: 0.5, marginLeft: 12, fontSize: 12 }}>
+              v1.0.1
+            </span>
           </span>
         </div>
       </footer>
