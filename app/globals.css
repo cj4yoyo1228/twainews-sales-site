@@ -9,3 +9,12 @@
 
 /* 字型由 layout.tsx 在 <head> 用 <link> 載入 Google Fonts CDN（Inter + Noto Sans TC）
    實際字型 stack 由 tokens.css 的 --font-body 控制 */
+
+/* ---------------------------------------------------------------------
+   Production overrides — 寫在 design CSS import 之後，下次 re-import 設計檔不會被蓋掉
+   --------------------------------------------------------------------- */
+
+/* Nav logo 放大：design 預設 28px 偏小 → 40px */
+.nav__brand img {
+  height: 40px;
+}

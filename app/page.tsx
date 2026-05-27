@@ -1683,7 +1683,7 @@ export default function Page() {
           <span>
             <a href="#">隱私權</a> · <a href="#">服務條款</a>
             <span style={{ opacity: 0.5, marginLeft: 12, fontSize: 12 }}>
-              v1.1.0
+              v1.1.1
             </span>
           </span>
         </div>
