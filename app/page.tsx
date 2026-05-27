@@ -40,6 +40,7 @@ export default function Page() {
           <nav className="nav__links">
             <a href="#how">運作方式</a>
             <a href="#cases">實際案例</a>
+            <a href="#usage">報導用途</a>
             <a href="#plans">方案價格</a>
           </nav>
           <div className="nav__cta">
@@ -1035,12 +1036,297 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ============= 08 PLANS (white) ============= */}
+      {/* ============= 08 USAGE — 一篇報導三種用法 (white) ============= */}
+      <section className="sec sec--white" id="usage">
+        <div className="wrap">
+          <header className="sec__head">
+            <span className="eyebrow">
+              <span className="ch">08</span>報導的用途
+              <span className="sep">｜</span>一篇報導、三倍價值
+            </span>
+            <h2 className="sec__title">
+              一篇報導，<span className="ac">三種用法</span>，<br />
+              能用<span className="ac">兩年以上</span>
+            </h2>
+            <p className="sec__sub">
+              上架不是終點。這是您未來 24 個月可以反覆運用的內容資產 — 從{" "}
+              <b>Google／AI 自然曝光</b>、到 <b>FB／Google 廣告素材</b>、再到{" "}
+              <b>分享給親友、老顧客</b>，<b>同一篇文章能跨平台複用</b>。
+            </p>
+          </header>
+
+          <div className="usage">
+            {/* Card 1 · 自然流量 */}
+            <article className="u-card">
+              <span className="u-card__chip">
+                <span className="u-card__chip-num">01</span>自然流量
+              </span>
+              <h3 className="u-card__t">
+                Google ＋ AI 摘要
+                <br />
+                <em>持續、被動</em> 的曝光
+              </h3>
+              <p className="u-card__lede">
+                Google 收錄為正式新聞，當客人 Google
+                您店名、地區、品項時，第一頁就看到。
+                <b>連 ChatGPT、Google AI 摘要也會引用</b>。
+              </p>
+
+              <div className="u-vis u-vis-seo">
+                <div className="u-vis-seo__bar">
+                  <i className="fi fi-sr-search"></i>
+                  <span>永和 早午餐 推薦</span>
+                </div>
+                <div className="u-vis-seo__ai">
+                  <span className="u-vis-seo__ai-tag">
+                    <i className="fi fi-sr-sparkles"></i>AI 摘要
+                  </span>
+                  <p>
+                    口碑最佳為「<b>吐司坊</b>」，根據{" "}
+                    <span className="u-vis-seo__cite">新北人新聞網</span> 報導……
+                  </p>
+                </div>
+                <div className="u-vis-seo__row">
+                  <span className="u-vis-seo__rank">#1</span>
+                  <div>
+                    <div className="u-vis-seo__dom">
+                      新北人新聞網 › news › toast-fang
+                    </div>
+                    <div className="u-vis-seo__h">
+                      吐司坊：在地客回訪率破八成…
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <ul className="u-card__list">
+                <li>
+                  <i className="fi fi-sr-check"></i>Google 搜尋第一頁，
+                  <b>不用付費投放</b>
+                </li>
+                <li>
+                  <i className="fi fi-sr-check"></i>ChatGPT、Google AI
+                  摘要優先引用
+                </li>
+                <li>
+                  <i className="fi fi-sr-check"></i>長尾流量持續累積{" "}
+                  <b>24 個月</b>
+                </li>
+              </ul>
+
+              <div className="u-card__foot">
+                <i className="fi fi-sr-time-fast"></i>上架後 7
+                天內開始累積，無需後續操作
+              </div>
+            </article>
+
+            {/* Card 2 (FEATURED) · 一條龍行銷素材 */}
+            <article className="u-card u-card--feat">
+              <span className="u-card__feat-badge">★ 老闆最常忽略</span>
+              <span className="u-card__chip">
+                <span className="u-card__chip-num">02</span>行銷素材
+              </span>
+              <h3 className="u-card__t">
+                高品質圖文頁直接拿去
+                <br />
+                <em>投廣告、印 DM</em>
+              </h3>
+              <p className="u-card__lede">
+                以前您要花心力 <b>找寫手、找攝影、找設計</b>
+                ，才有一份能投放的素材。現在 <b>一條龍幫您做好</b>
+                ，所有平台都能複用。
+              </p>
+
+              <div className="u-vis u-vis-multi">
+                <div className="u-vis-multi__hub">
+                  <i className="fi fi-sr-document"></i>
+                  <span>1 篇報導</span>
+                </div>
+                <div className="u-vis-multi__grid">
+                  <span className="u-vis-multi__chip c-fb">
+                    <i>f</i>
+                    <span>FB／IG 廣告</span>
+                  </span>
+                  <span className="u-vis-multi__chip c-ggl">
+                    <i>G</i>
+                    <span>Google 廣告</span>
+                  </span>
+                  <span className="u-vis-multi__chip c-line">
+                    <i>L</i>
+                    <span>LINE 推播</span>
+                  </span>
+                  <span className="u-vis-multi__chip c-prn">
+                    <i className="fi fi-sr-print"></i>
+                    <span>紙本 DM</span>
+                  </span>
+                  <span className="u-vis-multi__chip c-qr">
+                    <i className="fi fi-sr-qrcode"></i>
+                    <span>店內 QR</span>
+                  </span>
+                  <span className="u-vis-multi__chip c-ig">
+                    <i>IG</i>
+                    <span>IG bio link</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className="u-save">
+                <div className="u-save__col u-save__col--bad">
+                  <div className="u-save__col-h">老闆原本要做</div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-cross-small"></i>找寫手寫案
+                  </div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-cross-small"></i>找攝影師拍照
+                  </div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-cross-small"></i>找設計師排版
+                  </div>
+                </div>
+                <div className="u-save__col u-save__col--good">
+                  <div className="u-save__col-h">我們已經做好</div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-check"></i>編輯部撰稿
+                  </div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-check"></i>選圖、排版完成
+                  </div>
+                  <div className="u-save__row">
+                    <i className="fi fi-sr-check"></i>6 平台直接複用
+                  </div>
+                </div>
+              </div>
+
+              <div className="u-card__foot">
+                <i className="fi fi-sr-bolt"></i>包含 <b>數位廣告</b> ‧{" "}
+                <b>印刷 DM</b> ‧ <b>店內物料</b>
+              </div>
+            </article>
+
+            {/* Card 3 · 社交炫耀 */}
+            <article className="u-card">
+              <span className="u-card__chip">
+                <span className="u-card__chip-num">03</span>社交分享
+              </span>
+              <h3 className="u-card__t">
+                轉發給<em>親友、老顧客</em>
+                <br />
+                讓大家知道<em>你被報導了</em>
+              </h3>
+              <p className="u-card__lede">
+                不只是一篇文章 — 這是一個讓您 <b>可以一輩子炫耀</b> 的 PR
+                資產。轉發到 LINE、FB、Threads，朋友、員工、家人都會看到。
+              </p>
+
+              <div className="u-vis u-vis-chat">
+                <div className="u-chat-msg u-chat-msg--me">
+                  <div className="u-chat-bubble" style={{ padding: 4 }}>
+                    <div className="u-chat-link">
+                      <div
+                        className="u-chat-link__img"
+                        style={{
+                          backgroundImage:
+                            "linear-gradient(135deg,rgba(15,43,79,0),rgba(15,43,79,0.45)),url('/assets/sample-food.jpg')",
+                        }}
+                      >
+                        <span className="u-chat-link__brand">臺灣人新聞網</span>
+                      </div>
+                      <div className="u-chat-link__meta">
+                        <div className="u-chat-link__t">
+                          吐司坊：在地客回訪率破八成，老闆親揭好味道之道
+                        </div>
+                        <div className="u-chat-link__url">taiwan-news.tw</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="u-chat-msg">
+                  <span className="u-chat-avatar">媽</span>
+                  <div className="u-chat-bubble">天啊你上新聞了！？</div>
+                </div>
+                <div className="u-chat-msg">
+                  <span className="u-chat-avatar">朋</span>
+                  <div className="u-chat-bubble">
+                    老闆太厲害，我幫你轉到群組！
+                  </div>
+                </div>
+                <div className="u-chat-msg u-chat-msg--reacts">
+                  <span className="react-pill">❤ 12</span>
+                  <span>家族群組裡瘋傳中</span>
+                </div>
+              </div>
+
+              <ul className="u-card__list">
+                <li>
+                  <i className="fi fi-sr-check"></i>LINE／FB／Threads 一鍵轉發
+                </li>
+                <li>
+                  <i className="fi fi-sr-check"></i>老顧客信任感 <b>大幅提升</b>
+                </li>
+                <li>
+                  <i className="fi fi-sr-check"></i>一輩子能用的個人 PR 資產
+                </li>
+              </ul>
+
+              <div className="u-card__foot">
+                <i className="fi fi-sr-share"></i>新聞連結永久有效，隨時可分享
+              </div>
+            </article>
+          </div>
+
+          {/* bottom stat strip */}
+          <div className="u-stats">
+            <div className="u-stat">
+              <span className="u-stat__icon">
+                <i className="fi fi-sr-piggy-bank"></i>
+              </span>
+              <div>
+                <div className="u-stat__num">10,000+</div>
+                <div className="u-stat__lbl">
+                  省下<b>素材製作費</b>（寫手 + 攝影 + 設計）
+                </div>
+              </div>
+            </div>
+            <div className="u-stat">
+              <span className="u-stat__icon">
+                <i className="fi fi-sr-apps"></i>
+              </span>
+              <div>
+                <div className="u-stat__num">6 平台</div>
+                <div className="u-stat__lbl">
+                  同一篇內容可<b>跨平台複用</b>
+                </div>
+              </div>
+            </div>
+            <div className="u-stat">
+              <span className="u-stat__icon">
+                <i className="fi fi-sr-calendar-clock"></i>
+              </span>
+              <div>
+                <div className="u-stat__num">24 個月</div>
+                <div className="u-stat__lbl">
+                  內容資產<b>長期可用</b>，免重複付費
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="micro-note">
+            <i className="fi fi-sr-info"></i>
+            <span>
+              素材製作費估算為市場行情參考值，實際依寫手、攝影、設計師報價而異。FB／Google
+              廣告投放成效需依產業、競爭與素材本身評估。
+            </span>
+          </p>
+        </div>
+      </section>
+
+      {/* ============= 09 PLANS (white) ============= */}
       <section className="sec sec--white" id="plans">
         <div className="wrap">
           <header className="sec__head">
             <span className="eyebrow">
-              <span className="ch">08</span>方案與價格
+              <span className="ch">09</span>方案與價格
               <span className="sep">｜</span>限時體驗價
             </span>
             <h2 className="sec__title">
@@ -1314,7 +1600,7 @@ export default function Page() {
         <div className="wrap">
           <header className="sec__head sec__head--center">
             <span className="eyebrow">
-              <span className="ch">09</span>立即申請
+              <span className="ch">10</span>立即申請
               <span className="sep">｜</span>24 小時內回覆
             </span>
             <h2 className="sec__title">
@@ -1397,7 +1683,7 @@ export default function Page() {
           <span>
             <a href="#">隱私權</a> · <a href="#">服務條款</a>
             <span style={{ opacity: 0.5, marginLeft: 12, fontSize: 12 }}>
-              v1.0.1
+              v1.1.0
             </span>
           </span>
         </div>

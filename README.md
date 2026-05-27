@@ -83,4 +83,6 @@ npm run start   # 跑 production server，預設 port 3000
 
 ## 版本
 
-v1.0.0 — 2026-05-26 初版（Landing Page v2 設計）
+- v1.1.0 — 2026-05-27 新增「報導用途」section（3 張 card 展示「一篇報導三種用法」）+ nav 加入連結 + 後續 section 編號遞延
+- v1.0.1 — 2026-05-26 統計數字更新（合作店家 300、刊登報導 500+、月閱讀 100K+）
+- v1.0.0 — 2026-05-26 初版（Landing Page v2 設計）
